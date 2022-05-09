@@ -1,0 +1,10 @@
+<section class="bookmarks">
+  <h2 class="bookmarks__title">Bookmarks</h2>
+  <ul class="bookmarks__list">
+    <li class="bookmarks__item" *ngFor="let bookmark of bookmarks">
+      <a [routerLink]="['/profile', bookmark.id]"
+        >{{ bookmark.first_name }} {{ bookmark.last_name }}</a
+      >
+    </li>
+  </ul>
+</section>

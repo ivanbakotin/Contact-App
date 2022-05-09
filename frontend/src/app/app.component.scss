@@ -1,0 +1,18 @@
+nav {
+  background-color: rgb(57, 205, 250);
+  display: flex;
+}
+
+button {
+  padding: 0.5rem;
+}
+
+h1 {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: var(--font-size-md);
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

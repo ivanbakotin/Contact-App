@@ -1,0 +1,36 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  &__expand {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      width: 200px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  button {
+    background-color: rgb(169, 201, 242);
+    cursor: pointer;
+    padding: 0.6rem;
+    border-radius: 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

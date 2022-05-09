@@ -1,0 +1,31 @@
+.bookmarks {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 2rem;
+  border-right: black solid 2px;
+
+  &__title {
+    text-align: center;
+    border-bottom: solid 2px black;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    text-align: center;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(98, 204, 249);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

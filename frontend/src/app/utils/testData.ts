@@ -1,0 +1,43 @@
+export const Contact = [
+  {
+    id: 0,
+    first_name: 'ivan',
+    last_name: 'šarić',
+    address: 'Splitska',
+    city: 'Split',
+    country: 'Hrvatska',
+    gender: 'Muškarac',
+    bookmark: false,
+  },
+  {
+    id: 0,
+    first_name: 'Marija',
+    last_name: 'Željić',
+    address: 'Slovenska',
+    city: 'Prag',
+    country: 'Češka',
+    gender: 'Žena',
+    bookmark: true,
+  },
+
+  {
+    id: 0,
+    first_name: 'Luka',
+    last_name: 'Donat',
+    address: 'Lo',
+    city: 'Pariz',
+    country: 'Francuska',
+    gender: 'Muškarac',
+    bookmark: false,
+  },
+  {
+    id: 0,
+    first_name: 'Izabela',
+    last_name: 'Štrbič',
+    address: 'Jelačićeva',
+    city: 'Ploče',
+    country: 'Hrvatska',
+    gender: 'Žena',
+    bookmark: true,
+  },
+];

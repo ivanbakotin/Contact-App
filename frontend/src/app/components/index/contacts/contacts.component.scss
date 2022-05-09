@@ -1,0 +1,65 @@
+.contacts {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__search {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    button {
+      padding: 0.5rem;
+    }
+  }
+
+  &__title {
+    border-bottom: solid 2px black;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    background-color: rgb(232, 234, 238);
+    width: min(500px, 70%);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+
+  &__tag {
+    background-color: rgb(211, 222, 222);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__filter {
+    display: flex;
+    gap: 1rem;
+  }
+}

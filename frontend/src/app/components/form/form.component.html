@@ -1,0 +1,119 @@
+<form class="form" [formGroup]="form">
+  <h2 class="form__title">Update Contact</h2>
+  <div class="form__contact" formGroupName="contact">
+    <fieldset class="form__fieldset">
+      <legend>Personal Info</legend>
+
+      <div class="form__input">
+        <div class="form__label">
+          <label for="first_name">First Name:</label>
+          <input
+            formControlName="first_name"
+            id="first_name"
+            name="first_name"
+            type="text"
+          />
+        </div>
+        <div class="form__label">
+          <label for="last_name">Last Name:</label>
+          <input
+            formControlName="last_name"
+            id="last_name"
+            name="last_name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="form__input">
+        <div class="form__label">
+          <label for="gender">Gender:</label>
+          <input
+            formControlName="gender"
+            id="gender"
+            name="gender"
+            type="text"
+          />
+        </div>
+
+        <div class="form__label">
+          <label for="bookmark">Bookmark</label>
+          <input
+            formControlName="bookmark"
+            type="checkbox"
+            id="bookmark"
+            name="bookmark"
+          />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Location</legend>
+      <div class="form__input">
+        <div class="form__label">
+          <label for="address">Address:</label>
+          <input
+            formControlName="address"
+            id="address"
+            name="address"
+            type="text"
+          />
+        </div>
+        <div class="form__label">
+          <label for="city">City:</label>
+          <input formControlName="city" id="city" name="city" type="text" />
+        </div>
+
+        <div class="form__label">
+          <label for="country">Country:</label>
+          <input
+            formControlName="country"
+            id="country"
+            name="country"
+            type="text"
+          />
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="form__expand">
+    <div class="form__expand__list">
+      <ng-container formArrayName="tags">
+        <ng-container *ngFor="let tagForm of tags.controls; let i = index">
+          <div class="form__expand__list__item" [formGroupName]="i">
+            <input formControlName="tag" type="text" />
+            <button (click)="deleteTag(i)">Remove</button>
+          </div>
+        </ng-container>
+      </ng-container>
+      <button (click)="addTag()">Add Tag</button>
+    </div>
+
+    <div class="form__expand__list">
+      <ng-container formArrayName="phones">
+        <ng-container *ngFor="let phoneForm of phones.controls; let i = index">
+          <div class="form__expand__list__item" [formGroupName]="i">
+            <input formControlName="phone" type="text" />
+            <button (click)="deletePhone(i)">Remove</button>
+          </div>
+        </ng-container>
+      </ng-container>
+      <button (click)="addPhone()">Add Phone</button>
+    </div>
+
+    <div class="form__expand__list">
+      <ng-container formArrayName="emails">
+        <ng-container *ngFor="let emailForm of emails.controls; let i = index">
+          <div class="form__expand__list__item" [formGroupName]="i">
+            <input formControlName="email" type="text" />
+            <button (click)="deleteEmail(i)">Remove</button>
+          </div>
+        </ng-container>
+      </ng-container>
+      <button (click)="addEmail()">Add Email</button>
+    </div>
+  </div>
+
+  <button (click)="submitForm()" type="submit">Submit</button>
+</form>

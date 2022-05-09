@@ -1,0 +1,40 @@
+<section class="profile">
+  <h2 class="profile__title">
+    {{ profile.first_name }} {{ profile.last_name }}
+  </h2>
+
+  <section class="profile_info">
+    <div *ngIf="profile.bookmark == true">Bookmarked Contact</div>
+    <div>Gender: {{ profile.gender }}</div>
+    <div>Location: {{ profile.city }}, {{ profile.country }}</div>
+    <div>Address: {{ profile.address }}</div>
+  </section>
+
+  <section class="profile__expand">
+    <div class="profile__expand__list">
+      <h3>Tags</h3>
+      <ul>
+        <li *ngFor="let tag of profile.tags">{{ tag }}</li>
+      </ul>
+    </div>
+
+    <div class="profile__expand__list">
+      <h3>Emails</h3>
+      <ul>
+        <li *ngFor="let email of profile.emails">{{ email }}</li>
+      </ul>
+    </div>
+
+    <div class="profile__expand__list">
+      <h3>Phone Numbers:</h3>
+      <ul>
+        <li *ngFor="let phone of profile.phones">{{ phone }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="profile__buttons">
+    <button [routerLink]="['/']">Home</button>
+    <button [routerLink]="['/form', profile.id]">Update</button>
+  </div>
+</section>

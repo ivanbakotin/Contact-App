@@ -1,0 +1,67 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    margin: 1rem;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  &__input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__expand {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      width: 200px;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  button {
+    background-color: rgb(169, 201, 242);
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

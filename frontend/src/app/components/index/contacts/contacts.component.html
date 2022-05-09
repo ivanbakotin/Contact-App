@@ -1,0 +1,31 @@
+<section class="contacts">
+  <div class="contacts__search">
+    <button (click)="addContact()">Add New Contact</button>
+    <label for="search">Search contacts:</label>
+    <input (keyup)="searchContacts($event)" id="search" type="search" />
+  </div>
+  <h2 class="contacts__title">Contacts</h2>
+  <ul class="contacts__filter" *ngIf="currentTags.length != 0">
+    <li *ngFor="let filter of currentTags">{{ filter }}</li>
+    <button (click)="clearFilter()">Clear</button>
+  </ul>
+  <ul class="contacts__list">
+    <li class="contacts__item" *ngFor="let contact of filteredContacts">
+      <p>{{ contact.first_name }} {{ contact.last_name }}</p>
+      <div>
+        <ul class="contacts__tags">
+          <li *ngFor="let tag of contact.tags">
+            <button class="contacts__tag" (click)="filterByTag(tag)">
+              {{ tag }}
+            </button>
+          </li>
+        </ul>
+        <div class="contacts__buttons">
+          <button [routerLink]="['/profile', contact.id]">Profile</button>
+          <button [routerLink]="['/form', contact.id]">Update</button>
+          <button (click)="deleteContact(contact.id)">Delete</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
